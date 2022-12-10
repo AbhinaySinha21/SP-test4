@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100%;
+    width: 100%;
+    background-color:  #1abc9c;
+    font-family: "Fredoka", sans-serif;
+  }
+  
+  h1 {
+    color: white;
+    text-align: center;
+  }
+  .memory-game {
+    width: 550px;
+    margin: auto;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+  }
+  
+  .mc {
+    margin: 5px;
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    position: relative;
+    transform: scale(1);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: transform 0.5s; /* dönme efekti verir*/
+    box-shadow: 5px 2px 20px 0 rgba(82, 102, 117, 0.5);
+  }
+  
+  .mc:hover {
+    cursor: pointer;
+  }
+  
+  .mc:active {
+    transform: scale(0.97);
+    transition: transform 0.2s;
+  }
+  
+  .mc.flip {
+    -ms-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+  
+  .front-face,
+  .back-face {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 5px;
+  }
+  
+  .back-face {
+    background-color: pink;
+  }
+  
+  .front-face {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    background-color: white;
+  }
+  
+  img {
+    width: 100px;
+  }
+  
+  .final {
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin: auto;
+    padding: 10px 20px;
+  }
+  
+  .again {
+    font-size: 20px;
+    font-weight: bold;
+    color: #6186aa;
+    text-decoration: none;
+    margin: auto;
+    padding: 10px 20px;
+    width: 160px;
+    border: solid 1px;
+    border-radius: 5px;
+  }
+  
+  .again:hover {
+    background: #6186aa;
+    background-image: linear-gradient(to top left, #9b59b6, #1abc9c);
+    background-size: 250%;
+    color: white;
+    cursor: pointer;
+  }
+  
+  
